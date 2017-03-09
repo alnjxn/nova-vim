@@ -1,7 +1,7 @@
-const uiGroups = require('nova-colors').uiGroups
-const syntaxGroups = require('nova-colors').syntaxGroups
-const ansiGroups = require('nova-colors').ansiGroups
-const versionControlGroups = require('nova-colors').versionControlGroups
+const uiGroups = require('../lib/oceanic-next-colors').uiGroups
+const syntaxGroups = require('../lib/oceanic-next-colors').syntaxGroups
+const ansiGroups = require('../lib/oceanic-next-colors').ansiGroups
+const versionControlGroups = require('../lib/oceanic-next-colors').versionControlGroups
 
 const sourceString =`
 

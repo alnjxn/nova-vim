@@ -8,7 +8,7 @@
 function! s:highlight_helper(...)
   let l:syntax_group = a:1
   let l:foreground_color = a:2
-  let l:background_color = empty(a:3) ? "#3C4C55" : a:3
+  let l:background_color = empty(a:3) ? "#343D46" : a:3
   let l:gui = a:0 == 3 ? "None" : a:4
 
   exec "highlight " . l:syntax_group . " guifg=" . l:foreground_color . " guibg=" . l:background_color . " gui=" . l:gui . " cterm=NONE term=NONE"
@@ -27,76 +27,76 @@ set fillchars=""
 syntax on
 syntax reset
 let g:colors_name = "nova"
-call s:highlight_helper("Normal", "#C5D4DD", "")
+call s:highlight_helper("Normal", "#C0C5CE", "")
 
 " NEOVIM TERMINAL MODE
-let g:terminal_color_0 = "#3C4C55"
-let g:terminal_color_1 = "#DF8C8C"
-let g:terminal_color_2 = "#A8CE93"
-let g:terminal_color_3 = "#DADA93"
-let g:terminal_color_4 = "#83AFE5"
-let g:terminal_color_5 = "#9A93E1"
-let g:terminal_color_6 = "#7FC1CA"
-let g:terminal_color_7 = "#C5D4DD"
-let g:terminal_color_8 = "#899BA6"
-let g:terminal_color_9 = "#F2C38F"
-let g:terminal_color_10 = "#A8CE93"
-let g:terminal_color_11 = "#DADA93"
-let g:terminal_color_12 = "#83AFE5"
-let g:terminal_color_13 = "#D18EC2"
-let g:terminal_color_14 = "#7FC1CA"
-let g:terminal_color_15 = "#E6EEF3"
+let g:terminal_color_0 = "#343D46"
+let g:terminal_color_1 = "#EC5f67"
+let g:terminal_color_2 = "#99C794"
+let g:terminal_color_3 = "#FAC863"
+let g:terminal_color_4 = "#6699CC"
+let g:terminal_color_5 = "#C594C5"
+let g:terminal_color_6 = "#5FB3B3"
+let g:terminal_color_7 = "#C0C5CE"
+let g:terminal_color_8 = "#A7ADBA"
+let g:terminal_color_9 = "#F99157"
+let g:terminal_color_10 = "#99C794"
+let g:terminal_color_11 = "#FAC863"
+let g:terminal_color_12 = "#6699CC"
+let g:terminal_color_13 = "#AB7967"
+let g:terminal_color_14 = "#5FB3B3"
+let g:terminal_color_15 = "#D8DEE9"
 
 " ==================================================================
 " UI GROUPS
 " ==================================================================
 
 " USER ACTION NEEDED
-call s:highlight_helper("Error", "#DF8C8C", "")
-call s:highlight_helper("ErrorMsg", "#DF8C8C", "")
-call s:highlight_helper("WarningMsg", "#DF8C8C", "")
-call s:highlight_helper("SpellBad", "#DF8C8C", "")
-call s:highlight_helper("SpellCap", "#DF8C8C", "")
-call s:highlight_helper("Todo", "#DF8C8C", "")
-call s:highlight_helper("NeomakeErrorSign", "#DF8C8C", "")
-call s:highlight_helper("NeomakeWarningSign", "#DF8C8C", "")
+call s:highlight_helper("Error", "#EC5f67", "")
+call s:highlight_helper("ErrorMsg", "#EC5f67", "")
+call s:highlight_helper("WarningMsg", "#EC5f67", "")
+call s:highlight_helper("SpellBad", "#EC5f67", "")
+call s:highlight_helper("SpellCap", "#EC5f67", "")
+call s:highlight_helper("Todo", "#EC5f67", "")
+call s:highlight_helper("NeomakeErrorSign", "#EC5f67", "")
+call s:highlight_helper("NeomakeWarningSign", "#EC5f67", "")
 
 
 " USER CURRENT STATE
-call s:highlight_helper("MatchParen", "#7FC1CA", "NONE")
-call s:highlight_helper("CursorLineNr", "#7FC1CA", "")
-call s:highlight_helper("Visual", "#3C4C55", "#7FC1CA")
-call s:highlight_helper("VisualNOS", "#3C4C55", "#7FC1CA")
-call s:highlight_helper("Folded", "#7FC1CA", "")
-call s:highlight_helper("FoldColumn", "#7FC1CA", "")
-call s:highlight_helper("IncSearch", "#7FC1CA", "#6A7D89")
-call s:highlight_helper("Search", "#7FC1CA", "#6A7D89")
-call s:highlight_helper("WildMenu", "#556873", "#7FC1CA")
-call s:highlight_helper("Question", "#7FC1CA", "")
-call s:highlight_helper("MoreMsg", "#7FC1CA", "")
-call s:highlight_helper("ModeMsg", "#7FC1CA", "")
-call s:highlight_helper("StatusLine", "#7FC1CA", "#556873")
-call s:highlight_helper("PmenuSel", "#556873", "#7FC1CA")
-call s:highlight_helper("PmenuThumb", "#7FC1CA", "#7FC1CA")
-call s:highlight_helper("CtrlPMatch", "#3C4C55", "#7FC1CA")
+call s:highlight_helper("MatchParen", "#5FB3B3", "NONE")
+call s:highlight_helper("CursorLineNr", "#5FB3B3", "")
+call s:highlight_helper("Visual", "#343D46", "#5FB3B3")
+call s:highlight_helper("VisualNOS", "#343D46", "#5FB3B3")
+call s:highlight_helper("Folded", "#5FB3B3", "")
+call s:highlight_helper("FoldColumn", "#5FB3B3", "")
+call s:highlight_helper("IncSearch", "#5FB3B3", "#65737E")
+call s:highlight_helper("Search", "#5FB3B3", "#65737E")
+call s:highlight_helper("WildMenu", "#4F5B66", "#5FB3B3")
+call s:highlight_helper("Question", "#5FB3B3", "")
+call s:highlight_helper("MoreMsg", "#5FB3B3", "")
+call s:highlight_helper("ModeMsg", "#5FB3B3", "")
+call s:highlight_helper("StatusLine", "#5FB3B3", "#4F5B66")
+call s:highlight_helper("PmenuSel", "#4F5B66", "#5FB3B3")
+call s:highlight_helper("PmenuThumb", "#5FB3B3", "#5FB3B3")
+call s:highlight_helper("CtrlPMatch", "#343D46", "#5FB3B3")
 
 " GIT
-call s:highlight_helper("DiffAdd", "#3C4C55", "#A8CE93")
-call s:highlight_helper("DiffChange", "#3C4C55", "#F2C38F")
-call s:highlight_helper("DiffDelete", "#DF8C8C", "")
-call s:highlight_helper("DiffText", "#3C4C55", "#F2C38F", "BOLD")
+call s:highlight_helper("DiffAdd", "#343D46", "#99C794")
+call s:highlight_helper("DiffChange", "#343D46", "#F99157")
+call s:highlight_helper("DiffDelete", "#EC5f67", "")
+call s:highlight_helper("DiffText", "#343D46", "#F99157", "BOLD")
 
 " OTHER
 call s:highlight_helper("SignColumn", "NONE", "")
-call s:highlight_helper("LineNr", "#6A7D89", "")
-call s:highlight_helper("CursorLine", "NONE", "#556873")
-call s:highlight_helper("CursorColumn", "#556873", "")
-call s:highlight_helper("EndOfBuffer", "#556873", "")
-call s:highlight_helper("VertSplit", "#556873", "#556873")
-call s:highlight_helper("StatusLineNC", "#3C4C55", "#556873")
-call s:highlight_helper("Pmenu", "#C5D4DD", "#556873")
-call s:highlight_helper("PmenuSbar", "#899BA6", "#899BA6")
-call s:highlight_helper("ColorColumn", "#556873", "")
+call s:highlight_helper("LineNr", "#65737E", "")
+call s:highlight_helper("CursorLine", "NONE", "#4F5B66")
+call s:highlight_helper("CursorColumn", "#4F5B66", "")
+call s:highlight_helper("EndOfBuffer", "#4F5B66", "")
+call s:highlight_helper("VertSplit", "#4F5B66", "#4F5B66")
+call s:highlight_helper("StatusLineNC", "#343D46", "#4F5B66")
+call s:highlight_helper("Pmenu", "#C0C5CE", "#4F5B66")
+call s:highlight_helper("PmenuSbar", "#A7ADBA", "#A7ADBA")
+call s:highlight_helper("ColorColumn", "#4F5B66", "")
 
 
 " ==================================================================
@@ -104,155 +104,155 @@ call s:highlight_helper("ColorColumn", "#556873", "")
 " ==================================================================
 
 " CONSTANT
-call s:highlight_helper("Constant", "#7FC1CA", "")
-call s:highlight_helper("Directory", "#7FC1CA", "")
-call s:highlight_helper("jsObjectBraces", "#7FC1CA", "")
-call s:highlight_helper("jsBrackets", "#7FC1CA", "")
-call s:highlight_helper("jsObjectValue", "#7FC1CA", "")
-call s:highlight_helper("jsParen", "#7FC1CA", "")
-call s:highlight_helper("jsParenSwitch", "#7FC1CA", "")
-call s:highlight_helper("jsParenIfElse", "#7FC1CA", "")
-call s:highlight_helper("jsBracket", "#7FC1CA", "")
-call s:highlight_helper("jsTernaryIf", "#7FC1CA", "")
-call s:highlight_helper("jsTemplateString", "#7FC1CA", "")
-call s:highlight_helper("jsTemplateVar", "#7FC1CA", "")
-call s:highlight_helper("cssAttr", "#7FC1CA", "")
-call s:highlight_helper("cssAttrRegion", "#7FC1CA", "")
-call s:highlight_helper("cssAttributeSelector", "#7FC1CA", "")
-call s:highlight_helper("htmlTitle", "#7FC1CA", "")
-call s:highlight_helper("htmlH1", "#7FC1CA", "")
-call s:highlight_helper("htmlH2", "#7FC1CA", "")
-call s:highlight_helper("htmlH3", "#7FC1CA", "")
-call s:highlight_helper("htmlH4", "#7FC1CA", "")
-call s:highlight_helper("htmlH5", "#7FC1CA", "")
-call s:highlight_helper("htmlH6", "#7FC1CA", "")
-call s:highlight_helper("htmlLink", "#7FC1CA", "")
-call s:highlight_helper("markdownCode", "#7FC1CA", "")
-call s:highlight_helper("markdownCodeBlock", "#7FC1CA", "")
-call s:highlight_helper("xmlString", "#7FC1CA", "")
-call s:highlight_helper("netrwPlain", "#7FC1CA", "")
-call s:highlight_helper("netrwDir", "#7FC1CA", "")
-call s:highlight_helper("shDerefSimple", "#7FC1CA", "")
+call s:highlight_helper("Constant", "#5FB3B3", "")
+call s:highlight_helper("Directory", "#5FB3B3", "")
+call s:highlight_helper("jsObjectBraces", "#5FB3B3", "")
+call s:highlight_helper("jsBrackets", "#5FB3B3", "")
+call s:highlight_helper("jsObjectValue", "#5FB3B3", "")
+call s:highlight_helper("jsParen", "#5FB3B3", "")
+call s:highlight_helper("jsParenSwitch", "#5FB3B3", "")
+call s:highlight_helper("jsParenIfElse", "#5FB3B3", "")
+call s:highlight_helper("jsBracket", "#5FB3B3", "")
+call s:highlight_helper("jsTernaryIf", "#5FB3B3", "")
+call s:highlight_helper("jsTemplateString", "#5FB3B3", "")
+call s:highlight_helper("jsTemplateVar", "#5FB3B3", "")
+call s:highlight_helper("cssAttr", "#5FB3B3", "")
+call s:highlight_helper("cssAttrRegion", "#5FB3B3", "")
+call s:highlight_helper("cssAttributeSelector", "#5FB3B3", "")
+call s:highlight_helper("htmlTitle", "#5FB3B3", "")
+call s:highlight_helper("htmlH1", "#5FB3B3", "")
+call s:highlight_helper("htmlH2", "#5FB3B3", "")
+call s:highlight_helper("htmlH3", "#5FB3B3", "")
+call s:highlight_helper("htmlH4", "#5FB3B3", "")
+call s:highlight_helper("htmlH5", "#5FB3B3", "")
+call s:highlight_helper("htmlH6", "#5FB3B3", "")
+call s:highlight_helper("htmlLink", "#5FB3B3", "")
+call s:highlight_helper("markdownCode", "#5FB3B3", "")
+call s:highlight_helper("markdownCodeBlock", "#5FB3B3", "")
+call s:highlight_helper("xmlString", "#5FB3B3", "")
+call s:highlight_helper("netrwPlain", "#5FB3B3", "")
+call s:highlight_helper("netrwDir", "#5FB3B3", "")
+call s:highlight_helper("shDerefSimple", "#5FB3B3", "")
 
 " IDENTIFIER
-call s:highlight_helper("Identifier", "#83AFE5", "")
-call s:highlight_helper("jsVariableDef", "#83AFE5", "")
-call s:highlight_helper("jsObject", "#83AFE5", "")
-call s:highlight_helper("jsObjectKey", "#83AFE5", "")
-call s:highlight_helper("jsObjectStringKey", "#83AFE5", "")
-call s:highlight_helper("jsFuncArgs", "#83AFE5", "")
-call s:highlight_helper("jsDestructuringBlock", "#83AFE5", "")
-call s:highlight_helper("jsDestructuringArray", "#83AFE5", "")
-call s:highlight_helper("jsDestructuringPropertyValue", "#83AFE5", "")
-call s:highlight_helper("jsSpreadExpression", "#83AFE5", "")
-call s:highlight_helper("jsImportContainer", "#83AFE5", "")
-call s:highlight_helper("jsExportContainer", "#83AFE5", "")
-call s:highlight_helper("jsModuleGroup", "#83AFE5", "")
-call s:highlight_helper("cssClassName", "#83AFE5", "")
-call s:highlight_helper("cssIdentifier", "#83AFE5", "")
-call s:highlight_helper("htmlTagName", "#83AFE5", "")
-call s:highlight_helper("htmlSpecialTagName", "#83AFE5", "")
-call s:highlight_helper("htmlTag", "#83AFE5", "")
-call s:highlight_helper("htmlEndTag", "#83AFE5", "")
-call s:highlight_helper("jsonKeyword", "#83AFE5", "")
-call s:highlight_helper("xmlAttrib", "#83AFE5", "")
-call s:highlight_helper("netrwExe", "#83AFE5", "")
-call s:highlight_helper("shFunction", "#83AFE5", "")
+call s:highlight_helper("Identifier", "#6699CC", "")
+call s:highlight_helper("jsVariableDef", "#6699CC", "")
+call s:highlight_helper("jsObject", "#6699CC", "")
+call s:highlight_helper("jsObjectKey", "#6699CC", "")
+call s:highlight_helper("jsObjectStringKey", "#6699CC", "")
+call s:highlight_helper("jsFuncArgs", "#6699CC", "")
+call s:highlight_helper("jsDestructuringBlock", "#6699CC", "")
+call s:highlight_helper("jsDestructuringArray", "#6699CC", "")
+call s:highlight_helper("jsDestructuringPropertyValue", "#6699CC", "")
+call s:highlight_helper("jsSpreadExpression", "#6699CC", "")
+call s:highlight_helper("jsImportContainer", "#6699CC", "")
+call s:highlight_helper("jsExportContainer", "#6699CC", "")
+call s:highlight_helper("jsModuleGroup", "#6699CC", "")
+call s:highlight_helper("cssClassName", "#6699CC", "")
+call s:highlight_helper("cssIdentifier", "#6699CC", "")
+call s:highlight_helper("htmlTagName", "#6699CC", "")
+call s:highlight_helper("htmlSpecialTagName", "#6699CC", "")
+call s:highlight_helper("htmlTag", "#6699CC", "")
+call s:highlight_helper("htmlEndTag", "#6699CC", "")
+call s:highlight_helper("jsonKeyword", "#6699CC", "")
+call s:highlight_helper("xmlAttrib", "#6699CC", "")
+call s:highlight_helper("netrwExe", "#6699CC", "")
+call s:highlight_helper("shFunction", "#6699CC", "")
 
 " STATEMENT
-call s:highlight_helper("Statement", "#DADA93", "")
-call s:highlight_helper("jsFuncCall", "#DADA93", "")
-call s:highlight_helper("jsOperator", "#DADA93", "")
-call s:highlight_helper("jsSpreadOperator", "#DADA93", "")
-call s:highlight_helper("cssFunctionName", "#DADA93", "")
-call s:highlight_helper("cssProp", "#DADA93", "")
-call s:highlight_helper("htmlArg", "#DADA93", "")
-call s:highlight_helper("jsxRegion", "#DADA93", "")
-call s:highlight_helper("xmlTag", "#DADA93", "")
-call s:highlight_helper("xmlEndTag", "#DADA93", "")
-call s:highlight_helper("xmlTagName", "#DADA93", "")
-call s:highlight_helper("xmlEqual", "#DADA93", "")
-call s:highlight_helper("shCmdSubRegion", "#DADA93", "")
+call s:highlight_helper("Statement", "#FAC863", "")
+call s:highlight_helper("jsFuncCall", "#FAC863", "")
+call s:highlight_helper("jsOperator", "#FAC863", "")
+call s:highlight_helper("jsSpreadOperator", "#FAC863", "")
+call s:highlight_helper("cssFunctionName", "#FAC863", "")
+call s:highlight_helper("cssProp", "#FAC863", "")
+call s:highlight_helper("htmlArg", "#FAC863", "")
+call s:highlight_helper("jsxRegion", "#FAC863", "")
+call s:highlight_helper("xmlTag", "#FAC863", "")
+call s:highlight_helper("xmlEndTag", "#FAC863", "")
+call s:highlight_helper("xmlTagName", "#FAC863", "")
+call s:highlight_helper("xmlEqual", "#FAC863", "")
+call s:highlight_helper("shCmdSubRegion", "#FAC863", "")
 
 " TYPE
-call s:highlight_helper("Type", "#A8CE93", "")
-call s:highlight_helper("jsFunction", "#A8CE93", "")
-call s:highlight_helper("jsStorageClass", "#A8CE93", "")
-call s:highlight_helper("jsNan", "#A8CE93", "")
-call s:highlight_helper("shFunctionKey", "#A8CE93", "")
+call s:highlight_helper("Type", "#99C794", "")
+call s:highlight_helper("jsFunction", "#99C794", "")
+call s:highlight_helper("jsStorageClass", "#99C794", "")
+call s:highlight_helper("jsNan", "#99C794", "")
+call s:highlight_helper("shFunctionKey", "#99C794", "")
 
 " GLOBAL
-call s:highlight_helper("PreProc", "#9A93E1", "")
-call s:highlight_helper("jsGlobalObjects", "#9A93E1", "")
-call s:highlight_helper("jsThis", "#9A93E1", "")
-call s:highlight_helper("cssTagName", "#9A93E1", "")
-call s:highlight_helper("jsGlobalNodeObjects", "#9A93E1", "")
-call s:highlight_helper("cssFontDescriptor", "#9A93E1", "")
+call s:highlight_helper("PreProc", "#C594C5", "")
+call s:highlight_helper("jsGlobalObjects", "#C594C5", "")
+call s:highlight_helper("jsThis", "#C594C5", "")
+call s:highlight_helper("cssTagName", "#C594C5", "")
+call s:highlight_helper("jsGlobalNodeObjects", "#C594C5", "")
+call s:highlight_helper("cssFontDescriptor", "#C594C5", "")
 
 " EMPHASIS
-call s:highlight_helper("Underlined", "#D18EC2", "")
-call s:highlight_helper("markdownItalic", "#D18EC2", "")
-call s:highlight_helper("markdownBold", "#D18EC2", "")
-call s:highlight_helper("markdownBoldItalic", "#D18EC2", "")
+call s:highlight_helper("Underlined", "#AB7967", "")
+call s:highlight_helper("markdownItalic", "#AB7967", "")
+call s:highlight_helper("markdownBold", "#AB7967", "")
+call s:highlight_helper("markdownBoldItalic", "#AB7967", "")
 
 " SPECIAL
-call s:highlight_helper("Special", "#F2C38F", "")
-call s:highlight_helper("SpecialKey", "#F2C38F", "")
-call s:highlight_helper("NonText", "#F2C38F", "")
-call s:highlight_helper("Title", "#F2C38F", "")
-call s:highlight_helper("jsBraces", "#F2C38F", "")
-call s:highlight_helper("jsFuncBraces", "#F2C38F", "")
-call s:highlight_helper("jsDestructuringBraces", "#F2C38F", "")
-call s:highlight_helper("jsClassBraces", "#F2C38F", "")
-call s:highlight_helper("jsParens", "#F2C38F", "")
-call s:highlight_helper("jsFuncParens", "#F2C38F", "")
-call s:highlight_helper("jsArrowFunction", "#F2C38F", "")
-call s:highlight_helper("jsModuleAsterisk", "#F2C38F", "")
-call s:highlight_helper("cssBraces", "#F2C38F", "")
-call s:highlight_helper("cssBraces", "#F2C38F", "")
-call s:highlight_helper("markdownHeadingDelimiter", "#F2C38F", "")
-call s:highlight_helper("markdownH1", "#F2C38F", "")
-call s:highlight_helper("markdownH2", "#F2C38F", "")
-call s:highlight_helper("markdownH3", "#F2C38F", "")
-call s:highlight_helper("markdownH4", "#F2C38F", "")
-call s:highlight_helper("markdownH5", "#F2C38F", "")
-call s:highlight_helper("markdownH6", "#F2C38F", "")
-call s:highlight_helper("markdownRule", "#F2C38F", "")
-call s:highlight_helper("markdownListMarker", "#F2C38F", "")
-call s:highlight_helper("markdownOrderedListMarker", "#F2C38F", "")
-call s:highlight_helper("markdownLinkText", "#F2C38F", "")
-call s:highlight_helper("markdownCodeDelimiter", "#F2C38F", "")
-call s:highlight_helper("netrwClassify", "#F2C38F", "")
-call s:highlight_helper("netrwVersion", "#F2C38F", "")
-call s:highlight_helper("CtrlPStats", "#F2C38F", "")
+call s:highlight_helper("Special", "#F99157", "")
+call s:highlight_helper("SpecialKey", "#F99157", "")
+call s:highlight_helper("NonText", "#F99157", "")
+call s:highlight_helper("Title", "#F99157", "")
+call s:highlight_helper("jsBraces", "#F99157", "")
+call s:highlight_helper("jsFuncBraces", "#F99157", "")
+call s:highlight_helper("jsDestructuringBraces", "#F99157", "")
+call s:highlight_helper("jsClassBraces", "#F99157", "")
+call s:highlight_helper("jsParens", "#F99157", "")
+call s:highlight_helper("jsFuncParens", "#F99157", "")
+call s:highlight_helper("jsArrowFunction", "#F99157", "")
+call s:highlight_helper("jsModuleAsterisk", "#F99157", "")
+call s:highlight_helper("cssBraces", "#F99157", "")
+call s:highlight_helper("cssBraces", "#F99157", "")
+call s:highlight_helper("markdownHeadingDelimiter", "#F99157", "")
+call s:highlight_helper("markdownH1", "#F99157", "")
+call s:highlight_helper("markdownH2", "#F99157", "")
+call s:highlight_helper("markdownH3", "#F99157", "")
+call s:highlight_helper("markdownH4", "#F99157", "")
+call s:highlight_helper("markdownH5", "#F99157", "")
+call s:highlight_helper("markdownH6", "#F99157", "")
+call s:highlight_helper("markdownRule", "#F99157", "")
+call s:highlight_helper("markdownListMarker", "#F99157", "")
+call s:highlight_helper("markdownOrderedListMarker", "#F99157", "")
+call s:highlight_helper("markdownLinkText", "#F99157", "")
+call s:highlight_helper("markdownCodeDelimiter", "#F99157", "")
+call s:highlight_helper("netrwClassify", "#F99157", "")
+call s:highlight_helper("netrwVersion", "#F99157", "")
+call s:highlight_helper("CtrlPStats", "#F99157", "")
 
 " TRIVIAL
-call s:highlight_helper("Comment", "#899BA6", "")
-call s:highlight_helper("Ignore", "#899BA6", "")
-call s:highlight_helper("Conceal", "#899BA6", "")
-call s:highlight_helper("Noise", "#899BA6", "")
-call s:highlight_helper("jsNoise", "#899BA6", "")
-call s:highlight_helper("cssClassNameDot", "#899BA6", "")
-call s:highlight_helper("jsonQuote", "#899BA6", "")
-call s:highlight_helper("shQuote", "#899BA6", "")
+call s:highlight_helper("Comment", "#A7ADBA", "")
+call s:highlight_helper("Ignore", "#A7ADBA", "")
+call s:highlight_helper("Conceal", "#A7ADBA", "")
+call s:highlight_helper("Noise", "#A7ADBA", "")
+call s:highlight_helper("jsNoise", "#A7ADBA", "")
+call s:highlight_helper("cssClassNameDot", "#A7ADBA", "")
+call s:highlight_helper("jsonQuote", "#A7ADBA", "")
+call s:highlight_helper("shQuote", "#A7ADBA", "")
 
 " ==================================================================
 " COMMON PLUGINS
 " ==================================================================
 
 " GITGUTTER
-call s:highlight_helper("GitGutterAdd", "#A8CE93", "")
-call s:highlight_helper("GitGutterChange", "#F2C38F", "")
-call s:highlight_helper("GitGutterChangeDelete", "#F2C38F", "")
-call s:highlight_helper("GitGutterDelete", "#DF8C8C", "")
+call s:highlight_helper("GitGutterAdd", "#99C794", "")
+call s:highlight_helper("GitGutterChange", "#F99157", "")
+call s:highlight_helper("GitGutterChangeDelete", "#F99157", "")
+call s:highlight_helper("GitGutterDelete", "#EC5f67", "")
 
 " EASYMOTION
-call s:highlight_helper("EasyMotionTarget", "#DF8C8C", "", "BOLD")
-call s:highlight_helper("EasyMotionTarget2First", "#F2C38F", "")
-call s:highlight_helper("EasyMotionTarget2Second", "#DADA93", "")
-call s:highlight_helper("EasyMotionShade", "#899BA6", "")
+call s:highlight_helper("EasyMotionTarget", "#EC5f67", "", "BOLD")
+call s:highlight_helper("EasyMotionTarget2First", "#F99157", "")
+call s:highlight_helper("EasyMotionTarget2Second", "#FAC863", "")
+call s:highlight_helper("EasyMotionShade", "#A7ADBA", "")
 
 " FZF.vim
-call s:highlight_helper("fzf1", "#3C4C55", "#556873")
-call s:highlight_helper("fzf2", "#3C4C55", "#556873")
-call s:highlight_helper("fzf3", "#3C4C55", "#556873")
+call s:highlight_helper("fzf1", "#343D46", "#4F5B66")
+call s:highlight_helper("fzf2", "#343D46", "#4F5B66")
+call s:highlight_helper("fzf3", "#343D46", "#4F5B66")

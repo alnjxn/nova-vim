@@ -1,5 +1,5 @@
-const colorValues = require('nova-colors').default
-const uiGroups = require('nova-colors').uiGroups
+const colorValues = require('../lib/oceanic-next-colors').default
+const uiGroups = require('../lib/oceanic-next-colors').uiGroups
 
 /**
  * A note about the `airline#themes#generate_color_map` function
